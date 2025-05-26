@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2rwke1xw00fw"]
+
+[ext_resource type="Script" uid="uid://cc82w05n1hgxl" path="res://scrips/sistema_ui.gd" id="1_430qn"]
+[ext_resource type="Texture2D" uid="uid://bbh8nf1lur1sf" path="res://Assents/Fuel-Meter.png" id="1_jxxlo"]
+[ext_resource type="Texture2D" uid="uid://cbo1nvyjer1ci" path="res://Assents/Fuel-Indicator (1).png" id="2_3gyfu"]
+
+[node name="SistemaUI" type="CanvasLayer"]
+script = ExtResource("1_430qn")
+
+[node name="Panel de control" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 58)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Vidas" type="Label" parent="Panel de control"]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 17.0
+offset_right = 255.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Lifes: 3"
+
+[node name="Puntos" type="Label" parent="Panel de control"]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 15.0
+offset_right = 915.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Points:  0"
+
+[node name="Medidor" type="TextureRect" parent="Panel de control"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 8.0
+offset_right = 665.0
+offset_bottom = 48.0
+texture = ExtResource("1_jxxlo")
+expand_mode = 1
+
+[node name="Indicador" type="TextureRect" parent="Panel de control"]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 25.0
+offset_right = 644.0
+offset_bottom = 45.0
+texture = ExtResource("2_3gyfu")
+expand_mode = 1
+
+[node name="GameOver" type="CenterContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.492
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -11.4
+offset_right = 30.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Perdiste"

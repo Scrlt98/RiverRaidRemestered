@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="npc_configuracion" load_steps=3 format=3 uid="uid://dmt2htujcu2vn"]
+
+[ext_resource type="Shape2D" uid="uid://cxcecd25l8kgg" path="res://Resource/colisiones/colision_de_barco.tres" id="1_7e0l8"]
+[ext_resource type="Script" uid="uid://bvhx5cn5bb6it" path="res://scrips/npc_confi.gd" id="2_b4gkf"]
+
+[resource]
+script = ExtResource("2_b4gkf")
+npc_colision = ExtResource("1_7e0l8")
+npc_tipo = "Barco"
+explosion_color = Color(1, 0.779602, 0.320663, 1)
+velocidad = 80.0
+puntos = 100

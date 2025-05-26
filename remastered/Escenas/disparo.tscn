@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4erb0kcihb7n"]
+
+[ext_resource type="Script" uid="uid://bpdwimp8n0o2w" path="res://scrips/disparo.gd" id="1_2y1e7"]
+[ext_resource type="Texture2D" uid="uid://cxqh2vomcbr5h" path="res://Assents/02.png" id="2_1q5ul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8niyp"]
+size = Vector2(15, 34)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 10
+script = ExtResource("1_2y1e7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.745, 0.745)
+texture = ExtResource("2_1q5ul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -6)
+shape = SubResource("RectangleShape2D_8niyp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -13)
+rect = Rect2(-10, -10, 19, 35)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

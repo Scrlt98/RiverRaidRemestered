@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="npc_configuracion" load_steps=3 format=3 uid="uid://bbejq0i3l4weg"]
+
+[ext_resource type="Shape2D" uid="uid://dp8436eb53nmv" path="res://Resource/colisiones/colision_de_avion.tres" id="1_6skg3"]
+[ext_resource type="Script" uid="uid://bvhx5cn5bb6it" path="res://scrips/npc_confi.gd" id="2_acvmq"]
+
+[resource]
+script = ExtResource("2_acvmq")
+npc_colision = ExtResource("1_6skg3")
+npc_tipo = "avion"
+explosion_color = Color(0.181672, 0, 0.925575, 1)
+velocidad = 125.0
+puntos = 150
