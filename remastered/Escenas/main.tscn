@@ -195,11 +195,6 @@ tile_set = SubResource("TileSet_crgrh")
 
 [node name="Player" parent="." instance=ExtResource("2_vt1rs")]
 collision_mask = 10
-acceleration = null
-deceleration = null
-max_speed = null
-min_speed = null
-aire_resistencia = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
