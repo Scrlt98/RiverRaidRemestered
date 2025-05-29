@@ -16,7 +16,6 @@ func _ready() -> void:
 	ui.setuppower(maxpoder)
 
 
-
 func _on_reduccion_timer_timeout() -> void:
 	currentpoder -= 1
 	print(currentpoder)
@@ -30,6 +29,17 @@ func _on_crecimiento_timer_timeout() -> void:
 		currentpoder += 1
 		ui.cambio_indicador(Vector2.RIGHT, crecimiento.wait_time)
 		
+		
+		
+
+func incrementofuel():
+	crecimiento.start()
+	reduccion.stop()
+	
+func reduccionfuel():
+	reduccion.start()
+	crecimiento.stop()
+	
 func detenertiempo():
 	reduccion.stop()
 	crecimiento.stop()

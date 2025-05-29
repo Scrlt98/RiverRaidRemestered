@@ -57,10 +57,12 @@ disparo={
 2d_physics/layer_2="grupo"
 2d_physics/layer_3="proyectil"
 2d_physics/layer_4="objetivo"
+2d_physics/layer_5="combustible"
+2d_physics/layer_6="puente"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.149159, 0.00144288, 0.0281252, 1)
+environment/defaults/default_clear_color=Color(0.415495, 0.5589, 1, 1)
