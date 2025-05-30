@@ -116,15 +116,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_popmw"]
-size = Vector2(18, 36)
+size = Vector2(22, 50)
 
 [node name="fuelstation" type="Area2D"]
 collision_layer = 16
 script = ExtResource("1_popmw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 5.96046e-08)
-scale = Vector2(1.40778, 1.09668)
+position = Vector2(0, -1.43051e-06)
+scale = Vector2(2.07889, 1.51709)
 sprite_frames = SubResource("SpriteFrames_vh5oh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

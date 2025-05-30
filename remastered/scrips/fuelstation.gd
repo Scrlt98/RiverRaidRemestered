@@ -2,10 +2,13 @@ extends Area2D
 
 class_name fuelstation
 
+signal puntos(points: int)
+
 @onready var animacion: AnimatedSprite2D = $AnimatedSprite2D
 
 func explosion():
 	animacion.play("fuel explosion")
+	puntos.emit(125)
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animacion.animation == "fuel explosion":

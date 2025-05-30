@@ -2,6 +2,8 @@ extends Area2D
 
 class_name npc
 
+signal puntos(points: int)
+
 @export var npc_config: npc_configuracion
 @export var cambio_direccion_comienzo: bool
 
@@ -15,13 +17,16 @@ var movimiento = true
 func _ready() -> void:
 	colision.shape = npc_config.npc_colision
 	if cambio_direccion_comienzo:
-		scale.x = -1
+		if npc_config.npc_tipo == "avion":
+			scale.x = 1
+		else:
+			scale.x = -1
 		
 	animacion.play(npc_config.npc_tipo)
 	
 	
 	if npc_config.npc_tipo == "avion":
-		set_collision_mask_value(2, false)
+		set_collision_mask_value(2, -15)
 	
 	velocidad = npc_config.velocidad
 	
@@ -33,6 +38,7 @@ func explosion():
 	movimiento = false
 	animacion.modulate= npc_config.explosion_color
 	animacion.play("explosion")
+	puntos.emit(npc_config.puntos)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer:
