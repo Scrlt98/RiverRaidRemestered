@@ -47,8 +47,7 @@ func _physics_process(delta: float) -> void:
 			animacion2d.play("default")
 	elif velocity.y < 0:
 		velocity.y = min(velocity.y + aire_resistencia * delta, -min_speed)
-	#endregion
-	print(velocity)
+	#endregions
 	move_and_slide()
 	
 func explode():
