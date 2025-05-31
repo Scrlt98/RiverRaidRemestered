@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://6wxqnaei3djo" path="res://scrips/control.gd" id="1_kllkb"]
 [ext_resource type="Texture2D" uid="uid://eck1chg57833" path="res://Assents/descarga (2).jpg" id="2_050l1"]
-[ext_resource type="StyleBox" uid="uid://6wllki24mr3x" path="res://Resource/control.tres" id="3_ruidu"]
-[ext_resource type="StyleBox" uid="uid://b62lvqt7iqd8g" path="res://Resource/controlpress.tres" id="4_jffye"]
+[ext_resource type="StyleBox" path="res://Resource/control.tres" id="3_ruidu"]
+[ext_resource type="StyleBox" path="res://Resource/controlpress.tres" id="4_jffye"]
 [ext_resource type="AudioStream" uid="uid://dwi7g6ndbxdi4" path="res://Assents/sound/FGO OST Altria Pendragon.mp3" id="5_050l1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_050l1"]

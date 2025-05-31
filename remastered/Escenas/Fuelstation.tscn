@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://2x80e2b1nya3"]
 
 [ext_resource type="Script" uid="uid://chdi1orfreq0o" path="res://scrips/fuelstation.gd" id="1_popmw"]
-[ext_resource type="Texture2D" uid="uid://knjcljujqeop" path="res://Assents/sprites-Sheet.png" id="2_c84a5"]
+[ext_resource type="Texture2D" uid="uid://dix50mody78yp" path="res://Assents/sprites-Sheet.png" id="2_c84a5"]
 [ext_resource type="Texture2D" uid="uid://hb4d6frro6ll" path="res://Assents/Free Smoke Fx  Pixel 07.png" id="3_lvhq2"]
 [ext_resource type="AudioStream" uid="uid://drpjc5plkt0id" path="res://Assents/sound/collect-points-190037.mp3" id="4_c84a5"]
 [ext_resource type="AudioStream" uid="uid://sqndxa4ebowu" path="res://Assents/sound/bigboom-42826.mp3" id="5_lvhq2"]

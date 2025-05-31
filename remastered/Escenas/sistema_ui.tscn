@@ -20,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+color = Color(0.440464, 0.447069, 0.474523, 1)
 
 [node name="Vidas" type="Label" parent="Panel de control"]
 layout_mode = 0
@@ -27,8 +28,9 @@ offset_left = 201.0
 offset_top = 17.0
 offset_right = 255.0
 offset_bottom = 40.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Lifes: 3"
+theme_override_colors/font_color = Color(0, 1, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "𝑳𝒊𝒇𝒆𝒔: 3"
 
 [node name="Puntos" type="Label" parent="Panel de control"]
 layout_mode = 0
@@ -36,8 +38,9 @@ offset_left = 848.0
 offset_top = 15.0
 offset_right = 915.0
 offset_bottom = 38.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Points:  0"
+theme_override_colors/font_color = Color(0, 1, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "𝑷𝒐𝒊𝒏𝒕𝒔:  0"
 
 [node name="Medidor" type="TextureRect" parent="Panel de control"]
 layout_mode = 0
@@ -121,13 +124,14 @@ texture = ExtResource("5_s61fy")
 expand_mode = 1
 
 [node name="exit" type="Button" parent="YouWin/ColorRect"]
+layout_mode = 0
 offset_left = 128.0
 offset_top = 230.0
 offset_right = 286.0
 offset_bottom = 273.0
 theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_s61fy")
-text = "𝑹𝒆𝒊𝒏𝒊𝒄𝒊𝒂𝒓 𝑱𝒖𝒆𝒈𝒐"
+text = "𝑬𝑿𝑰𝑻"
 
 [connection signal="pressed" from="GameOver/ColorRect/reiniciar" to="." method="_on_reiniciar_pressed"]
 [connection signal="pressed" from="YouWin/ColorRect/exit" to="." method="_on_exit_pressed"]

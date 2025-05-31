@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://6jfyxf0iao2x"]
 
-[ext_resource type="Texture2D" uid="uid://knjcljujqeop" path="res://Assents/sprites-Sheet.png" id="1_4ypgb"]
+[ext_resource type="Texture2D" uid="uid://dix50mody78yp" path="res://Assents/sprites-Sheet.png" id="1_4ypgb"]
 [ext_resource type="Texture2D" uid="uid://hb4d6frro6ll" path="res://Assents/Free Smoke Fx  Pixel 07.png" id="2_3ms1r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8q5i"]

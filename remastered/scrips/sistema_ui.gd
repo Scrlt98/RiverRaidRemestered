@@ -20,7 +20,7 @@ func  _ready() -> void:
 	var entidades_con_puntos = get_tree().get_nodes_in_group("puntos")
 	for entidades in entidades_con_puntos:
 		entidades.puntos.connect(on_puntos)
-	punto.text = "Points %d" % puntos_totales
+	punto.text = "𝑷𝒐𝒊𝒏𝒕𝒔 %d" % puntos_totales
 	
 	
 	
@@ -42,10 +42,10 @@ func youwin_():
 	
 func on_puntos(puntaje):
 	puntos_totales += puntaje
-	punto.text = "Puntos: %d" % puntos_totales
+	punto.text = "𝑷𝒐𝒊𝒏𝒕𝒔: %d" % puntos_totales
 	
 func aplicacion_vidas(vida: int):
-	vidas.text = "Lifes: %d" % vida
+	vidas.text = "𝑳𝒊𝒇𝒆𝒔: %d" % vida
 	
 
 
