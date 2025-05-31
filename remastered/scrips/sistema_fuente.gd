@@ -3,6 +3,7 @@ extends Node
 class_name Principal
 
 @export var vidas_jugador = 3
+@export var punttotal = 1
 const escena_del_jugador = preload("res://Escenas/player.tscn")
 
 @onready var jugador: Player = $Player
@@ -11,16 +12,20 @@ const escena_del_jugador = preload("res://Escenas/player.tscn")
 @onready var camara: PhantomCamera2D = $PhantomCamera2D
 var respawn = Vector2(0, 0)
 
+
+
 func _ready() -> void:
 	var nodos_puente = puentes.get_children() as Array[Puente]
 	for puente in nodos_puente:
 		puente.punto_spaw.connect(on_punto_spawn)
 		
+	
 	UI.aplicacion_vidas(vidas_jugador)
 	jugador.connect("tree_exited", on_jugador_tree)
-		
+			
 func on_punto_spawn(punto_respawn):
 	respawn = punto_respawn
+	
 	
 func on_jugador_tree():
 	vidas_jugador -= 1
@@ -29,6 +34,9 @@ func on_jugador_tree():
 	else:
 		respawn_del_jugador()
 		UI.aplicacion_vidas(vidas_jugador)
+	
+		
+	
 		
 func respawn_del_jugador():
 	jugador = escena_del_jugador.instantiate()
@@ -36,4 +44,6 @@ func respawn_del_jugador():
 	jugador.global_position = respawn
 	camara.follow_target = jugador
 	jugador.connect("tree_exited", on_jugador_tree)
+	
+	
 	

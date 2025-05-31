@@ -387,99 +387,118 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="map1" type="Node" parent="NPC/barcos"]
 
 [node name="barcoNPC" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-224, -65)
+position = Vector2(-167, -65)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC2" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(236, -439)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC3" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(333, -679)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC4" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-353, -811)
+position = Vector2(-319, -811)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC5" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(373, -1124)
+position = Vector2(328, -1120)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC6" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-231, -1454)
+position = Vector2(-190, -1453)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC7" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(212, -1988)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC8" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-244, -2491)
+position = Vector2(-200, -2491)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC9" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(227, -2918)
+position = Vector2(206, -2918)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC10" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-241, -3649)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC11" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(241, -3217)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC12" parent="NPC/barcos/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(336, -4105)
+position = Vector2(320, -4093)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="map2" type="Node" parent="NPC/barcos"]
 
 [node name="barcoNPC12" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(270, -4457)
+position = Vector2(245, -4464)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC13" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(363, -4833)
+position = Vector2(344, -4833)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC14" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-348, -5020)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC15" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(370, -5410)
+position = Vector2(325, -5445)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC16" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-298, -5877)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC17" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(324, -6325)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC18" parent="NPC/barcos/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-314, -6769)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
@@ -487,51 +506,61 @@ cambio_direccion_comienzo = true
 
 [node name="barcoNPC18" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(221, -7255)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC19" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-314, -7521)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC20" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-276, -7984)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC21" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-174, -8489)
+position = Vector2(-144, -8487)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC22" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-235, -8762)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC23" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-49, -9233)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC24" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-159, -9727)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC25" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-288, -10247)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC26" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(-144, -10703)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
 [node name="barcoNPC27" parent="NPC/barcos/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(141, -11162)
+rotation = -3.0997
 npc_config = ExtResource("7_n3qho")
 cambio_direccion_comienzo = true
 
@@ -615,17 +644,12 @@ npc_config = ExtResource("9_b1m0k")
 cambio_direccion_comienzo = true
 
 [node name="avionNPC3" parent="NPC/avion/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(301, -391)
+position = Vector2(301, -365)
 npc_config = ExtResource("9_b1m0k")
 cambio_direccion_comienzo = true
 
 [node name="avionNPC2" parent="NPC/avion/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
 position = Vector2(303, -116)
-npc_config = ExtResource("9_b1m0k")
-cambio_direccion_comienzo = true
-
-[node name="avionNPC" parent="NPC/avion/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(300, -233)
 npc_config = ExtResource("9_b1m0k")
 cambio_direccion_comienzo = true
 
@@ -734,7 +758,7 @@ npc_config = ExtResource("9_b1m0k")
 cambio_direccion_comienzo = true
 
 [node name="avionNPC37" parent="NPC/avion/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-199, -11374)
+position = Vector2(-178, -11372)
 npc_config = ExtResource("9_b1m0k")
 cambio_direccion_comienzo = true
 
@@ -752,15 +776,11 @@ position = Vector2(-155, -156)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC2" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-220, -306)
+position = Vector2(-172, -307)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC3" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-372, -698)
-npc_config = ExtResource("8_l8mww")
-
-[node name="helicopterNPC2" parent="NPC/helicoptero/map1/helicopterNPC3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(372, 88)
+position = Vector2(-174, -560)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC4" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
@@ -780,19 +800,19 @@ position = Vector2(-210, -1823)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC8" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(249, -2303)
+position = Vector2(230, -2303)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC9" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-210, -3004)
+position = Vector2(-175, -3004)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC10" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(372, -3668)
+position = Vector2(337, -3657)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC11" parent="NPC/helicoptero/map1" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-396, -4005)
+position = Vector2(-357, -4019)
 npc_config = ExtResource("8_l8mww")
 
 [node name="map2" type="Node" parent="NPC/helicoptero"]
@@ -802,7 +822,7 @@ position = Vector2(-197, -4513)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC12" parent="NPC/helicoptero/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-390, -4790)
+position = Vector2(-372, -4790)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC13" parent="NPC/helicoptero/map2" groups=["puntos"] instance=ExtResource("6_1md0r")]
@@ -836,7 +856,7 @@ position = Vector2(334, -7425)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC19" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(376, -7775)
+position = Vector2(333, -7773)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC20" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
@@ -844,11 +864,11 @@ position = Vector2(249, -8268)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC21" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(226, -8921)
+position = Vector2(194, -8925)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC22" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-212, -9518)
+position = Vector2(-188, -9518)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC23" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
@@ -856,11 +876,11 @@ position = Vector2(143, -9897)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC24" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(366, -10342)
+position = Vector2(345, -10342)
 npc_config = ExtResource("8_l8mww")
 
 [node name="helicopterNPC25" parent="NPC/helicoptero/map3" groups=["puntos"] instance=ExtResource("6_1md0r")]
-position = Vector2(-220, -11001)
+position = Vector2(-180, -10999)
 npc_config = ExtResource("8_l8mww")
 
 [node name="SistemaUI" parent="." instance=ExtResource("10_n3qho")]
@@ -993,3 +1013,6 @@ position = Vector2(68, -4328)
 
 [node name="Puente_Checkpoint2" parent="Puente_checkpoint" groups=["puntos"] instance=ExtResource("13_nyv6x")]
 position = Vector2(68, -7013)
+
+[node name="Puente_Checkpoint3" parent="Puente_checkpoint" groups=["puntos"] instance=ExtResource("13_nyv6x")]
+position = Vector2(76, -11558)

@@ -1,11 +1,43 @@
-[gd_scene load_steps=20 format=3 uid="uid://rm12t8qgcjcs"]
+[gd_scene load_steps=36 format=3 uid="uid://rm12t8qgcjcs"]
 
 [ext_resource type="Script" uid="uid://bu2egsv4j6yvl" path="res://scrips/npc.gd" id="1_us8x8"]
-[ext_resource type="Texture2D" uid="uid://crttf30ip8huh" path="res://Assents/Main Ship - Base - Full health.png" id="2_7qj7g"]
-[ext_resource type="Texture2D" uid="uid://6qadbsn1w0c" path="res://Assents/barco vermelho.png" id="2_gvjmg"]
+[ext_resource type="Texture2D" uid="uid://cmnqi73j3ibdn" path="res://Assents/airplane_sprites_by_prinzeugn_dr3iup-removebg-preview.png" id="2_2cee3"]
+[ext_resource type="Texture2D" uid="uid://mbj883bfycqw" path="res://Assents/Boat free Fast Moving.png" id="3_2cee3"]
 [ext_resource type="Texture2D" uid="uid://hb4d6frro6ll" path="res://Assents/Free Smoke Fx  Pixel 07.png" id="4_2cee3"]
-[ext_resource type="Shape2D" uid="uid://cxcecd25l8kgg" path="res://Resource/colisiones/colision_de_barco.tres" id="4_4cceo"]
-[ext_resource type="Texture2D" uid="uid://boqyq7hm1oiq" path="res://Assents/Fermented Calculator.png" id="4_us8x8"]
+[ext_resource type="Texture2D" uid="uid://bfsbsqp1rsmdt" path="res://Assents/helicopter.png" id="5_2cee3"]
+[ext_resource type="Shape2D" uid="uid://dp8436eb53nmv" path="res://Resource/colisiones/colision_de_avion.tres" id="6_2cee3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcwih"]
+atlas = ExtResource("2_2cee3")
+region = Rect2(0, 6, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au5rj"]
+atlas = ExtResource("2_2cee3")
+region = Rect2(64, 6, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk3nl"]
+atlas = ExtResource("2_2cee3")
+region = Rect2(128, 6, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg73t"]
+atlas = ExtResource("2_2cee3")
+region = Rect2(192, 6, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75l02"]
+atlas = ExtResource("2_2cee3")
+region = Rect2(256, 6, 64, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g20bf"]
+atlas = ExtResource("3_2cee3")
+region = Rect2(128, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dbwj"]
+atlas = ExtResource("3_2cee3")
+region = Rect2(128, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73x6b"]
+atlas = ExtResource("3_2cee3")
+region = Rect2(128, 160, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4cceo"]
 atlas = ExtResource("4_2cee3")
@@ -55,23 +87,73 @@ region = Rect2(640, 1152, 64, 64)
 atlas = ExtResource("4_2cee3")
 region = Rect2(704, 1152, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb844"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(14, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfkty"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(108, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t54n"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(202, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxlbe"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(296, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlv6w"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(390, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxe3l"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(484, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dch7"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(578, 0, 94, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvoql"]
+atlas = ExtResource("5_2cee3")
+region = Rect2(672, 0, 94, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7qj7g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7qj7g")
+"texture": SubResource("AtlasTexture_wcwih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au5rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk3nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg73t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75l02")
 }],
-"loop": false,
+"loop": true,
 "name": &"avion",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gvjmg")
+"texture": SubResource("AtlasTexture_g20bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dbwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73x6b")
 }],
-"loop": false,
+"loop": true,
 "name": &"barco",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -112,15 +194,36 @@ animations = [{
 }],
 "loop": false,
 "name": &"explosion",
-"speed": 15.0
+"speed": 22.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_us8x8")
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_wb844")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_tfkty")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_8t54n")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_wxlbe")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_jlv6w")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_vxe3l")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_6dch7")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_hvoql")
 }],
-"loop": false,
+"loop": true,
 "name": &"helicoptero",
-"speed": 5.0
+"speed": 91.0
 }]
 
 [node name="NPC" type="Area2D"]
@@ -129,12 +232,13 @@ collision_mask = 7
 script = ExtResource("1_us8x8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -0.00174533
 sprite_frames = SubResource("SpriteFrames_7qj7g")
 animation = &"barco"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
-shape = ExtResource("4_4cceo")
+position = Vector2(-1, 0)
+shape = ExtResource("6_2cee3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

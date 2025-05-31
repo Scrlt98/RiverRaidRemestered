@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4neu6amrut1e"]
+
+[ext_resource type="Texture2D" uid="uid://bqjxu3x24x4qi" path="res://Assents/avionde-combate-naranja-1tap0p94bziogdpw.webp" id="1_bkm7y"]
+[ext_resource type="Script" uid="uid://6wxqnaei3djo" path="res://scrips/control.gd" id="1_kllkb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kllkb"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruidu"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jffye"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kllkb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bkm7y")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -119.0
+offset_right = 287.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kllkb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ruidu")
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 305.0
+offset_top = -119.0
+offset_right = 569.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_jffye")
+text = "EXIT"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_button_2_pressed"]

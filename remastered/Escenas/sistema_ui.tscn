@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2rwke1xw00fw"]
+[gd_scene load_steps=8 format=3 uid="uid://c2rwke1xw00fw"]
 
 [ext_resource type="Script" uid="uid://cc82w05n1hgxl" path="res://scrips/sistema_ui.gd" id="1_430qn"]
 [ext_resource type="Texture2D" uid="uid://bbh8nf1lur1sf" path="res://Assents/Fuel-Meter.png" id="1_jxxlo"]
 [ext_resource type="Texture2D" uid="uid://cbo1nvyjer1ci" path="res://Assents/Fuel-Indicator (1).png" id="2_3gyfu"]
+[ext_resource type="Texture2D" uid="uid://emjqos7r4wd3" path="res://Assents/GAME_OVER.webp" id="4_gmd1n"]
+[ext_resource type="Texture2D" uid="uid://bp48acopdrl06" path="res://Assents/win.jpg" id="5_s61fy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s61fy"]
+bg_color = Color(0.437573, 0.00013982, 0.440563, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynl3f"]
+bg_color = Color(0.439216, 0, 0.439216, 1)
 
 [node name="SistemaUI" type="CanvasLayer"]
 script = ExtResource("1_430qn")
@@ -54,34 +62,76 @@ expand_mode = 1
 
 [node name="GameOver" type="CenterContainer" parent="."]
 visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.519
+anchor_right = 0.511
+anchor_bottom = 0.519
+offset_left = -100.0
+offset_top = -112.312
+offset_right = 87.3279
+offset_bottom = 87.688
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameOver/ColorRect"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_gmd1n")
+expand_mode = 1
+
+[node name="reiniciar" type="Button" parent="GameOver/ColorRect"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 230.0
+offset_right = 286.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_s61fy")
+text = "𝑹𝒆𝒊𝒏𝒊𝒄𝒊𝒂𝒓 𝑱𝒖𝒆𝒈𝒐"
+
+[node name="YouWin" type="CenterContainer" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
-custom_minimum_size = Vector2(200, 200)
+[node name="ColorRect" type="ColorRect" parent="YouWin"]
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="GameOver/ColorRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.492
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -11.4
-offset_right = 30.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Perdiste"
+[node name="TextureRect" type="TextureRect" parent="YouWin/ColorRect"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_s61fy")
+expand_mode = 1
+
+[node name="volverajugar" type="Button" parent="YouWin/ColorRect"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 241.0
+offset_right = 259.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_ynl3f")
+text = "𝑽𝒐𝒍𝒗𝒆𝒓 𝒂 𝑱𝒖𝒈𝒂𝒓"
+
+[connection signal="pressed" from="GameOver/ColorRect/reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="YouWin/ColorRect/volverajugar" to="." method="_on_volverajugar_pressed"]
