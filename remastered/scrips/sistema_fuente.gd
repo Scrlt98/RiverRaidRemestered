@@ -3,7 +3,6 @@ extends Node
 class_name Principal
 
 @export var vidas_jugador = 3
-@export var punttotal = 1
 const escena_del_jugador = preload("res://Escenas/player.tscn")
 
 @onready var jugador: Player = $Player
@@ -31,9 +30,10 @@ func on_jugador_tree():
 	vidas_jugador -= 1
 	if vidas_jugador == 0:
 		UI.gameover.show()
-	else:
+	else:  
 		respawn_del_jugador()
 		UI.aplicacion_vidas(vidas_jugador)
+		
 	
 		
 	
@@ -45,5 +45,11 @@ func respawn_del_jugador():
 	camara.follow_target = jugador
 	jugador.connect("tree_exited", on_jugador_tree)
 	
+
 	
 	
+	
+func _on_w_1n_body_entered(body: Node2D) -> void:
+	if body is Player:
+		UI.youwin.show()
+		##get_tree().paused  = true

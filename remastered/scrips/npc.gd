@@ -9,6 +9,7 @@ signal puntos(points: int)
 
 @onready var animacion: AnimatedSprite2D = $AnimatedSprite2D
 @onready var colision: CollisionShape2D = $CollisionShape2D
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 var direccion = 1
 var velocidad
@@ -39,6 +40,7 @@ func explosion():
 	animacion.modulate= npc_config.explosion_color
 	animacion.play("explosion")
 	puntos.emit(npc_config.puntos)
+	audio.play()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer:

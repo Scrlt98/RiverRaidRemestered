@@ -1,16 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4neu6amrut1e"]
+[gd_scene load_steps=7 format=3 uid="uid://b4neu6amrut1e"]
 
-[ext_resource type="Texture2D" uid="uid://bqjxu3x24x4qi" path="res://Assents/avionde-combate-naranja-1tap0p94bziogdpw.webp" id="1_bkm7y"]
 [ext_resource type="Script" uid="uid://6wxqnaei3djo" path="res://scrips/control.gd" id="1_kllkb"]
+[ext_resource type="Texture2D" uid="uid://eck1chg57833" path="res://Assents/descarga (2).jpg" id="2_050l1"]
+[ext_resource type="StyleBox" uid="uid://6wllki24mr3x" path="res://Resource/control.tres" id="3_ruidu"]
+[ext_resource type="StyleBox" uid="uid://b62lvqt7iqd8g" path="res://Resource/controlpress.tres" id="4_jffye"]
+[ext_resource type="AudioStream" uid="uid://dwi7g6ndbxdi4" path="res://Assents/sound/FGO OST Altria Pendragon.mp3" id="5_050l1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kllkb"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruidu"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jffye"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_050l1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -36,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_bkm7y")
+texture = ExtResource("2_050l1")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="ColorRect"]
@@ -50,23 +47,61 @@ offset_right = 287.0
 offset_bottom = -20.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 66
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kllkb")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ruidu")
-text = "PLAY"
+theme_override_styles/focus = SubResource("StyleBoxFlat_050l1")
+theme_override_styles/hover_pressed = ExtResource("3_ruidu")
+theme_override_styles/hover = ExtResource("3_ruidu")
+theme_override_styles/pressed = ExtResource("4_jffye")
+theme_override_styles/normal = ExtResource("4_jffye")
+text = "𝑷𝑳𝑨𝒀"
 
 [node name="Button2" type="Button" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 305.0
-offset_top = -119.0
-offset_right = 569.0
+offset_left = 293.0
+offset_top = -134.0
+offset_right = 557.0
 offset_bottom = -20.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 66
-theme_override_styles/normal = SubResource("StyleBoxFlat_jffye")
-text = "EXIT"
+theme_override_styles/focus = SubResource("StyleBoxFlat_050l1")
+theme_override_styles/hover_pressed = ExtResource("3_ruidu")
+theme_override_styles/hover = ExtResource("3_ruidu")
+theme_override_styles/pressed = ExtResource("4_jffye")
+theme_override_styles/normal = ExtResource("4_jffye")
+text = "𝑬𝑿𝑰𝑻"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -5.0
+offset_right = 772.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0.654201, 0.000477938, 0.689756, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = "𝑹𝒊𝒗𝒆𝒓 𝑹𝒂𝒊𝒅 𝑹𝒆𝒎𝒂𝒔𝒕𝒆𝒓𝒆𝒅
+             (𝑩𝑬𝑻𝑨 𝟏.𝟎)"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.035
+offset_left = 967.0
+offset_top = 486.0
+offset_right = 1112.42
+offset_bottom = 619.32
+theme_override_colors/font_color = Color(0.654902, 0, 0.690196, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "𝑩𝒀:
+    𝑺𝒄𝒓𝒍𝒕𝟗𝟖
+        EliS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_050l1")
 
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/Button2" to="." method="_on_button_2_pressed"]

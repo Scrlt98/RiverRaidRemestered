@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpb6apmpwxvug"]
+[gd_scene load_steps=5 format=3 uid="uid://cpb6apmpwxvug"]
 
 [ext_resource type="Script" uid="uid://dhoih5jv2lta" path="res://scrips/puente_checkpoint.gd" id="1_o8q5i"]
 [ext_resource type="SpriteFrames" uid="uid://6jfyxf0iao2x" path="res://Resource/puente_checkpoint.tres" id="2_klegf"]
+[ext_resource type="AudioStream" uid="uid://cdbks4xbcuf4b" path="res://Assents/sound/winning-82808.mp3" id="3_klegf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xiv76"]
 size = Vector2(288, 61)
@@ -63,4 +64,8 @@ visible = false
 position = Vector2(-73, 15)
 shape = SubResource("RectangleShape2D_xiv76")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_klegf")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

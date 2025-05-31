@@ -10,6 +10,7 @@ var currentpoder
 
 @onready var reduccion: Timer = $ReduccionTimer
 @onready var crecimiento: Timer = $CrecimientoTimer
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
 	currentpoder = maxpoder
@@ -18,8 +19,10 @@ func _ready() -> void:
 
 func _on_reduccion_timer_timeout() -> void:
 	currentpoder -= 1
-	print(currentpoder)
+	##print(currentpoder)
 	ui.cambio_indicador(Vector2.LEFT, reduccion.wait_time)
+	if currentpoder < 10:
+		audio.play()
 	
 	if currentpoder == 0:
 		(get_parent() as Player).explode()
@@ -28,6 +31,7 @@ func _on_crecimiento_timer_timeout() -> void:
 	if currentpoder < maxpoder:
 		currentpoder += 1
 		ui.cambio_indicador(Vector2.RIGHT, crecimiento.wait_time)
+		audio.stop()
 		
 		
 		

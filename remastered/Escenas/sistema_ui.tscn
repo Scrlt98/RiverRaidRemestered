@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2rwke1xw00fw"]
+[gd_scene load_steps=7 format=3 uid="uid://c2rwke1xw00fw"]
 
 [ext_resource type="Script" uid="uid://cc82w05n1hgxl" path="res://scrips/sistema_ui.gd" id="1_430qn"]
 [ext_resource type="Texture2D" uid="uid://bbh8nf1lur1sf" path="res://Assents/Fuel-Meter.png" id="1_jxxlo"]
@@ -8,9 +8,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s61fy"]
 bg_color = Color(0.437573, 0.00013982, 0.440563, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynl3f"]
-bg_color = Color(0.439216, 0, 0.439216, 1)
 
 [node name="SistemaUI" type="CanvasLayer"]
 script = ExtResource("1_430qn")
@@ -123,15 +120,14 @@ offset_bottom = 40.0
 texture = ExtResource("5_s61fy")
 expand_mode = 1
 
-[node name="volverajugar" type="Button" parent="YouWin/ColorRect"]
-layout_mode = 0
-offset_left = 133.0
-offset_top = 241.0
-offset_right = 259.0
-offset_bottom = 272.0
+[node name="exit" type="Button" parent="YouWin/ColorRect"]
+offset_left = 128.0
+offset_top = 230.0
+offset_right = 286.0
+offset_bottom = 273.0
 theme_override_font_sizes/font_size = 18
-theme_override_styles/normal = SubResource("StyleBoxFlat_ynl3f")
-text = "𝑽𝒐𝒍𝒗𝒆𝒓 𝒂 𝑱𝒖𝒈𝒂𝒓"
+theme_override_styles/normal = SubResource("StyleBoxFlat_s61fy")
+text = "𝑹𝒆𝒊𝒏𝒊𝒄𝒊𝒂𝒓 𝑱𝒖𝒆𝒈𝒐"
 
 [connection signal="pressed" from="GameOver/ColorRect/reiniciar" to="." method="_on_reiniciar_pressed"]
-[connection signal="pressed" from="YouWin/ColorRect/volverajugar" to="." method="_on_volverajugar_pressed"]
+[connection signal="pressed" from="YouWin/ColorRect/exit" to="." method="_on_exit_pressed"]

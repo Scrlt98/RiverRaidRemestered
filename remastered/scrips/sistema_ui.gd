@@ -40,7 +40,7 @@ func youwin_():
 	youwin.show()
 	
 	
-func on_puntos(puntaje: int):
+func on_puntos(puntaje):
 	puntos_totales += puntaje
 	punto.text = "Puntos: %d" % puntos_totales
 	
@@ -52,9 +52,12 @@ func aplicacion_vidas(vida: int):
 func _on_reiniciar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Escenas/main.tscn")
 	
+func _on_exit_pressed() -> void:
+	get_tree().quit()
 	
-func _on_volverajugar_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenas/main.tscn")
+	
+##func _on_volverajugar_pressed() -> void:
+	##get_tree().change_scene_to_file("res://Escenas/main.tscn")
 	
 	
 

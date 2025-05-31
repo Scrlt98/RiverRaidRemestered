@@ -2,6 +2,12 @@ extends CharacterBody2D
 
 class_name Player
 
+@export_group("Sonidos")
+@export var acelera: AudioStream
+@export var loop: AudioStream
+@export var decelera: AudioStream
+@export var explosionS: AudioStream
+@export_group("")
 #region Player movement variables
 @export_group("Movement")
 @export var acceleration: float = 500
@@ -16,7 +22,11 @@ class_name Player
 @onready var animacion2d:  AnimatedSprite2D = $AnimatedSprite2D 
 @onready var animacion2dw: AnimatedSprite2D = $AnimatedSprite2D/AnimatedSprite2Dw
 @onready var podersistema: sistemapoder = $PoderSistema
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 #endregion
+
+var start_sound = false
+var end_sound = false
 
 func _physics_process(delta: float) -> void:
 	
@@ -41,10 +51,16 @@ func _physics_process(delta: float) -> void:
 		velocity.y = max(velocity.y - acceleration * delta, -max_speed)
 		if animacion2dw.animation != "aceleracion":
 			animacion2dw.play("propulsor")
+		if !start_sound:
+			start_sound = true
+			play_sonidos(acelera)
 	elif Input.is_action_pressed("freno"):
 		velocity.y = min(velocity.y + deceleration * delta, -min_speed)
 		if animacion2d.animation != "freno":
 			animacion2d.play("default")
+		if !end_sound && end_sound:
+			play_sonidos(decelera)
+			end_sound = true
 	elif velocity.y < 0:
 		velocity.y = min(velocity.y + aire_resistencia * delta, -min_speed)
 	#endregions
@@ -56,6 +72,8 @@ func explode():
 	set_physics_process(false)
 	velocity = Vector2.ZERO
 	podersistema.detenertiempo()
+	audio.stream = explosionS
+	audio.play()
 	
 	
 
@@ -63,3 +81,20 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if animacion2d.animation == "explosion nave":
 		queue_free() 
 		
+
+func play_sonidos(stream: AudioStream):
+	if audio.playing:
+		audio.stop()
+		
+	audio.stream = stream
+	audio.play()
+	
+	
+
+func _on_audio_stream_player_finished() -> void:
+	if audio.stream == acelera:
+		play_sonidos(loop)
+		
+	if audio.stream == decelera:
+		start_sound = false
+		end_sound = false

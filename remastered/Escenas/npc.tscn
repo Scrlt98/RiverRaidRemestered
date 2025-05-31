@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://rm12t8qgcjcs"]
+[gd_scene load_steps=37 format=3 uid="uid://rm12t8qgcjcs"]
 
 [ext_resource type="Script" uid="uid://bu2egsv4j6yvl" path="res://scrips/npc.gd" id="1_us8x8"]
 [ext_resource type="Texture2D" uid="uid://cmnqi73j3ibdn" path="res://Assents/airplane_sprites_by_prinzeugn_dr3iup-removebg-preview.png" id="2_2cee3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://hb4d6frro6ll" path="res://Assents/Free Smoke Fx  Pixel 07.png" id="4_2cee3"]
 [ext_resource type="Texture2D" uid="uid://bfsbsqp1rsmdt" path="res://Assents/helicopter.png" id="5_2cee3"]
 [ext_resource type="Shape2D" uid="uid://dp8436eb53nmv" path="res://Resource/colisiones/colision_de_avion.tres" id="6_2cee3"]
+[ext_resource type="AudioStream" uid="uid://0ls57is7ek1y" path="res://Assents/sound/explosion-322491.mp3" id="7_4cceo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcwih"]
 atlas = ExtResource("2_2cee3")
@@ -239,6 +240,9 @@ animation = &"barco"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
 shape = ExtResource("6_2cee3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4cceo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

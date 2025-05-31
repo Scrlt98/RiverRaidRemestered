@@ -1,8 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://2x80e2b1nya3"]
+[gd_scene load_steps=22 format=3 uid="uid://2x80e2b1nya3"]
 
 [ext_resource type="Script" uid="uid://chdi1orfreq0o" path="res://scrips/fuelstation.gd" id="1_popmw"]
 [ext_resource type="Texture2D" uid="uid://knjcljujqeop" path="res://Assents/sprites-Sheet.png" id="2_c84a5"]
 [ext_resource type="Texture2D" uid="uid://hb4d6frro6ll" path="res://Assents/Free Smoke Fx  Pixel 07.png" id="3_lvhq2"]
+[ext_resource type="AudioStream" uid="uid://drpjc5plkt0id" path="res://Assents/sound/collect-points-190037.mp3" id="4_c84a5"]
+[ext_resource type="AudioStream" uid="uid://sqndxa4ebowu" path="res://Assents/sound/bigboom-42826.mp3" id="5_lvhq2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0p346"]
 atlas = ExtResource("2_c84a5")
@@ -116,19 +118,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_popmw"]
-size = Vector2(22, 50)
+size = Vector2(29, 59)
 
 [node name="fuelstation" type="Area2D"]
 collision_layer = 16
 script = ExtResource("1_popmw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -1.43051e-06)
-scale = Vector2(2.07889, 1.51709)
+modulate = Color(0.768627, 0, 0, 1)
+self_modulate = Color(0.958718, 0.586983, 1, 1)
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(2.78945, 1.7898)
 sprite_frames = SubResource("SpriteFrames_vh5oh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_popmw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_c84a5")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lvhq2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

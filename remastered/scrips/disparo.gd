@@ -22,7 +22,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is fuelstation:
 		(area as fuelstation).explosion()
 		
-	if area is Puente:
-		(area as Puente).explode()
+	#if area is Puente:
+		#(area as Puente).explode()
 	
 	queue_free()

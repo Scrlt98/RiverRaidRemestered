@@ -6,6 +6,7 @@ signal destruido
 signal punto_spaw(spaw_point: Vector2)
 signal puntos(points: int)
 var fue_destuido = false
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 @onready var animaciones  = [
 	$AnimatedSprite2D,$AnimatedSprite2D/AnimatedSprite2D,
@@ -28,7 +29,7 @@ func explode():
 		puntos.emit(20)
 		destruido.emit()
 		fue_destuido = true
-		
+	audio.play()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
@@ -36,3 +37,10 @@ func _on_body_entered(body: Node2D) -> void:
 			(body as Player).explode()
 		else:
 			punto_spaw.emit(self.position)
+			
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is misil:
+		explode()
+		set_collision_mask_value(3, false)
